@@ -19,6 +19,11 @@
 }
 - (void)viewDidLoad {
     content=[[NSMutableArray alloc]init];
+    
+    _contentTable = [self makeTableView];
+    [_contentTable registerClass:[UITableViewCell class] forCellReuseIdentifier:@"Content"];
+    [self.view addSubview:_contentTable];
+    [self getData];
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }
@@ -36,6 +41,7 @@
         
         for (NSDictionary *item in responseObject[@"objects"]) {
             [content addObject:item];
+            NSLog(@"%@",item[@"name"]);
         }
         if ([content count]) {
             NSLog(@"si hay ");
@@ -60,7 +66,7 @@
     CGFloat y = 50;
     CGFloat width = self.view.frame.size.width;
     CGFloat height = self.view.frame.size.height - 50;
-    height = content.count*80 - 0;
+   
     CGRect tableFrame = CGRectMake(x, y, width, height);
     
     _contentTable= [[UITableView alloc]initWithFrame:tableFrame style:UITableViewStylePlain];
@@ -95,7 +101,7 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     
-    [cell.textLabel setText: [content objectAtIndex:indexPath.row]];
+    [cell.textLabel setText: [content objectAtIndex:indexPath.row][@"name"] ];
     
     return cell;
 }
