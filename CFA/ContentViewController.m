@@ -16,6 +16,7 @@
 {
 
     NSMutableArray *content;
+    NSString *nextPage;
 }
 - (void)viewDidLoad {
     content=[[NSMutableArray alloc]init];
@@ -23,7 +24,7 @@
     _contentTable = [self makeTableView];
     [_contentTable registerClass:[UITableViewCell class] forCellReuseIdentifier:@"Content"];
     [self.view addSubview:_contentTable];
-    [self getData];
+    [self getData:@"http://codeforamerica.org/api/organizations"];
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }
@@ -33,12 +34,12 @@
     // Dispose of any resources that can be recreated.
 }
 
--(void)getData{
+-(void)getData:(NSString *)url {
     
   
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-    [manager GET:@"http://codeforamerica.org/api/organizations" parameters:@{} success:^(AFHTTPRequestOperation *operation, id responseObject){
-        
+    [manager GET:url parameters:@{} success:^(AFHTTPRequestOperation *operation, id responseObject){
+        nextPage=responseObject[@"pages"][@"next"];
         for (NSDictionary *item in responseObject[@"objects"]) {
             [content addObject:item];
             NSLog(@"%@",item[@"name"]);
@@ -105,7 +106,13 @@
     
     return cell;
 }
-
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSInteger lastSectionIndex = [tableView numberOfSections] - 1;
+    NSInteger lastRowIndex = [tableView numberOfRowsInSection:lastSectionIndex] - 1;
+    if ((indexPath.section == lastSectionIndex) && (indexPath.row == lastRowIndex)) {
+        [self getData:nextPage];
+    }
+}
 
 /*
 #pragma mark - Navigation
