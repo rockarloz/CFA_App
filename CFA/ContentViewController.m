@@ -9,6 +9,7 @@
 #import "ContentViewController.h"
 #import <AFHTTPRequestOperationManager.h>
 #import "OrganizationTableViewCell.h"
+#import "OrganizationDescriptionViewController.h"
 @interface ContentViewController ()
 
 @end
@@ -116,6 +117,16 @@
     }
 }
 
+
+#pragma mark - Table view Delegate
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    OrganizationDescriptionViewController *detail = [[OrganizationDescriptionViewController alloc] init];
+    detail.data=[content objectAtIndex:indexPath.row];
+    [self presentViewController:detail animated:YES completion:nil];
+    
+}
 /*
 #pragma mark - Navigation
 

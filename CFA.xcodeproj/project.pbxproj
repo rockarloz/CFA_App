@@ -17,6 +17,8 @@
 		F3DB45231A7CA23200B0C5F3 /* CFATests.m in Sources */ = {isa = PBXBuildFile; fileRef = F3DB45221A7CA23200B0C5F3 /* CFATests.m */; };
 		F3DB452E1A7CA8E100B0C5F3 /* ContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3DB452D1A7CA8E100B0C5F3 /* ContentViewController.m */; };
 		F3DB45311A7CAFBD00B0C5F3 /* OrganizationTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F3DB45301A7CAFBD00B0C5F3 /* OrganizationTableViewCell.m */; };
+		F3DB45341A7CB34400B0C5F3 /* OrganizationDescriptionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3DB45331A7CB34400B0C5F3 /* OrganizationDescriptionViewController.m */; };
+		F3DB45361A7CB39100B0C5F3 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3DB45351A7CB39100B0C5F3 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +52,9 @@
 		F3DB452D1A7CA8E100B0C5F3 /* ContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentViewController.m; sourceTree = "<group>"; };
 		F3DB452F1A7CAFBD00B0C5F3 /* OrganizationTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrganizationTableViewCell.h; sourceTree = "<group>"; };
 		F3DB45301A7CAFBD00B0C5F3 /* OrganizationTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrganizationTableViewCell.m; sourceTree = "<group>"; };
+		F3DB45321A7CB34400B0C5F3 /* OrganizationDescriptionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrganizationDescriptionViewController.h; sourceTree = "<group>"; };
+		F3DB45331A7CB34400B0C5F3 /* OrganizationDescriptionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrganizationDescriptionViewController.m; sourceTree = "<group>"; };
+		F3DB45351A7CB39100B0C5F3 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3DB45361A7CB39100B0C5F3 /* MapKit.framework in Frameworks */,
 				53D803AC036431ADC200B39D /* libPods-CFA.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -74,6 +80,7 @@
 		5BFAE270E9D0E641CEDD31DE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F3DB45351A7CB39100B0C5F3 /* MapKit.framework */,
 				1CAE74288D24F25F28CF6988 /* libPods-CFA.a */,
 			);
 			name = Frameworks;
@@ -119,6 +126,8 @@
 				F3DB452D1A7CA8E100B0C5F3 /* ContentViewController.m */,
 				F3DB452F1A7CAFBD00B0C5F3 /* OrganizationTableViewCell.h */,
 				F3DB45301A7CAFBD00B0C5F3 /* OrganizationTableViewCell.m */,
+				F3DB45321A7CB34400B0C5F3 /* OrganizationDescriptionViewController.h */,
+				F3DB45331A7CB34400B0C5F3 /* OrganizationDescriptionViewController.m */,
 				F3DB45101A7CA23200B0C5F3 /* Main.storyboard */,
 				F3DB45131A7CA23200B0C5F3 /* Images.xcassets */,
 				F3DB45151A7CA23200B0C5F3 /* LaunchScreen.xib */,
@@ -292,6 +301,7 @@
 				F3DB450F1A7CA23200B0C5F3 /* ViewController.m in Sources */,
 				F3DB45311A7CAFBD00B0C5F3 /* OrganizationTableViewCell.m in Sources */,
 				F3DB450C1A7CA23200B0C5F3 /* AppDelegate.m in Sources */,
+				F3DB45341A7CB34400B0C5F3 /* OrganizationDescriptionViewController.m in Sources */,
 				F3DB45091A7CA23200B0C5F3 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
