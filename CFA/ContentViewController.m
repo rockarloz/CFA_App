@@ -20,6 +20,7 @@
     NSMutableArray *content;
     NSString *nextPage;
 }
+
 - (void)viewDidLoad {
     content=[[NSMutableArray alloc]init];
     
@@ -44,10 +45,10 @@
         nextPage=responseObject[@"pages"][@"next"];
         for (NSDictionary *item in responseObject[@"objects"]) {
             [content addObject:item];
-            NSLog(@"%@",item[@"name"]);
+            //NSLog(@"%@",item[@"name"]);
         }
         if ([content count]) {
-            NSLog(@"si hay ");
+          //  NSLog(@"si hay ");
             [_contentTable reloadData];
         }
         else{
@@ -113,7 +114,12 @@
     NSInteger lastSectionIndex = [tableView numberOfSections] - 1;
     NSInteger lastRowIndex = [tableView numberOfRowsInSection:lastSectionIndex] - 1;
     if ((indexPath.section == lastSectionIndex) && (indexPath.row == lastRowIndex)) {
-        [self getData:nextPage];
+        
+        NSLog(@"%@",nextPage);
+        if (nextPage !=nil) {
+          [self getData:nextPage];  
+        }
+        
     }
 }
 

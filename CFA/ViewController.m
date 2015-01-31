@@ -76,6 +76,9 @@
 {
     
 ContentViewController *content = [[ContentViewController alloc] init];
+    
+   // [self.navigationController pushViewController:content animated:YES];
+    
 [self presentViewController:content animated:YES completion:nil];
     
 }

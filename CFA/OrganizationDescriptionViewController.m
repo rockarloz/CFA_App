@@ -18,7 +18,7 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _map=[[MKMapView alloc]initWithFrame:CGRectMake(0, 64, self.view.frame.size.width, 150)];
+    _map=[[MKMapView alloc]initWithFrame:CGRectMake(0, 64, self.view.frame.size.width, 250)];
     _map.delegate=self;
     [self.view addSubview:_map];
     
@@ -28,7 +28,7 @@
     marker.longitude = [_data[@"longitude"] doubleValue];
    
   
-    MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(marker, 3000, 3000);
+    MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(marker, 1000, 1000);
     [_map setRegion:region animated:YES];
     // Do any additional setup after loading the view.
 }
