@@ -16,6 +16,7 @@
 		F3DB45171A7CA23200B0C5F3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3DB45151A7CA23200B0C5F3 /* LaunchScreen.xib */; };
 		F3DB45231A7CA23200B0C5F3 /* CFATests.m in Sources */ = {isa = PBXBuildFile; fileRef = F3DB45221A7CA23200B0C5F3 /* CFATests.m */; };
 		F3DB452E1A7CA8E100B0C5F3 /* ContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3DB452D1A7CA8E100B0C5F3 /* ContentViewController.m */; };
+		F3DB45311A7CAFBD00B0C5F3 /* OrganizationTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F3DB45301A7CAFBD00B0C5F3 /* OrganizationTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,8 @@
 		F3DB45221A7CA23200B0C5F3 /* CFATests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CFATests.m; sourceTree = "<group>"; };
 		F3DB452C1A7CA8E100B0C5F3 /* ContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentViewController.h; sourceTree = "<group>"; };
 		F3DB452D1A7CA8E100B0C5F3 /* ContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentViewController.m; sourceTree = "<group>"; };
+		F3DB452F1A7CAFBD00B0C5F3 /* OrganizationTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrganizationTableViewCell.h; sourceTree = "<group>"; };
+		F3DB45301A7CAFBD00B0C5F3 /* OrganizationTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrganizationTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +117,8 @@
 				F3DB450E1A7CA23200B0C5F3 /* ViewController.m */,
 				F3DB452C1A7CA8E100B0C5F3 /* ContentViewController.h */,
 				F3DB452D1A7CA8E100B0C5F3 /* ContentViewController.m */,
+				F3DB452F1A7CAFBD00B0C5F3 /* OrganizationTableViewCell.h */,
+				F3DB45301A7CAFBD00B0C5F3 /* OrganizationTableViewCell.m */,
 				F3DB45101A7CA23200B0C5F3 /* Main.storyboard */,
 				F3DB45131A7CA23200B0C5F3 /* Images.xcassets */,
 				F3DB45151A7CA23200B0C5F3 /* LaunchScreen.xib */,
@@ -285,6 +290,7 @@
 			files = (
 				F3DB452E1A7CA8E100B0C5F3 /* ContentViewController.m in Sources */,
 				F3DB450F1A7CA23200B0C5F3 /* ViewController.m in Sources */,
+				F3DB45311A7CAFBD00B0C5F3 /* OrganizationTableViewCell.m in Sources */,
 				F3DB450C1A7CA23200B0C5F3 /* AppDelegate.m in Sources */,
 				F3DB45091A7CA23200B0C5F3 /* main.m in Sources */,
 			);

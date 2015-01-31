@@ -8,6 +8,7 @@
 
 #import "ContentViewController.h"
 #import <AFHTTPRequestOperationManager.h>
+#import "OrganizationTableViewCell.h"
 @interface ContentViewController ()
 
 @end
@@ -96,14 +97,15 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    OrganizationTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        cell = [[OrganizationTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     
-    [cell.textLabel setText: [content objectAtIndex:indexPath.row][@"name"] ];
-    
+    [cell.name setText: [content objectAtIndex:indexPath.row][@"name"] ];
+    [cell.city setText: [content objectAtIndex:indexPath.row][@"city"] ];
+    [cell.type setText: [content objectAtIndex:indexPath.row][@"type"] ];
     return cell;
 }
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
